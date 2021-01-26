@@ -1,7 +1,7 @@
 body {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
+    max-width: 330px;
     margin: 8px auto;
     font-family: Verdana, Sans-Serif;
     height: 100vh;
