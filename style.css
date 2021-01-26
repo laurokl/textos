@@ -1,0 +1,151 @@
+body {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 8px auto;
+    font-family: Verdana, Sans-Serif;
+    height: 100vh;
+}
+
+nav {
+    font-size: 1rem;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    background-color: black;
+    color: white;
+  }
+
+h1 {
+    border: 1px solid;
+    border-left: none;
+    border-right: none;
+    color: rgb(65, 62, 62);
+    font-family: 'Cutive Mono', monospace;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6em;
+    color: #333;
+    margin: 0.5rem;
+}
+
+input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+.row {
+    display: flex;
+}
+.row .col {
+    flex: 1;
+}
+.row .col:last-child {
+    margin-left: 1em;
+}
+
+.tabs {
+    overflow: hidden;
+}
+.tab {
+    width: 100%;
+    overflow: hidden;
+}
+.tab-label {
+    display: flex;
+    padding: 1em;
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.15rem;
+}
+
+.tab-label:hover {
+    background-color: rgba(32, 30, 30, 0.925);
+    color: white;
+}
+
+.tab-label::after {
+    content: "";
+    width: 1em;
+    height: 1em;
+    transition: all 0.35s;
+}
+
+.tab-content {
+    max-height: 0;
+    padding: 0 1em;
+    transition: all 0.35s;
+
+}
+.tab-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    cursor: pointer;
+}
+
+/*
+.tab-close:hover {
+    background: ;
+}
+*/
+
+input:checked + .tab-label::after {
+    transform: rotate(90deg);
+}
+
+input:checked ~ .tab-content {
+    max-height: 100vh;
+    padding: 0.5rem;
+}
+
+footer {
+    border: 1px solid;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    margin-top: auto;
+}
+
+footer p{
+    font-size: 0.65rem;
+}
+
+  
+
+  @media only screen and (min-width: 540px) {
+    /* For some mobile devices: */
+    body {
+        max-width: 500px;
+    }
+
+    nav {
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 0.75rem;
+    }
+
+    .footernav {
+        font-size: 0.75rem;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    body {
+        max-width: 700px;
+    }
+
+    footer {
+        font-size: 0.65rem;
+    }
+  }
