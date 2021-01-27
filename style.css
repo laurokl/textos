@@ -91,21 +91,24 @@ input {
     padding: 1em;
     font-size: 0.75em;
     cursor: pointer;
+
 }
 
-/*
+
 .tab-close:hover {
-    background: ;
+    background-color: rgba(32, 30, 30, 0.925);
 }
-*/
+
 
 input:checked + .tab-label::after {
     transform: rotate(90deg);
+
 }
 
 input:checked ~ .tab-content {
     max-height: 100vh;
     padding: 0.5rem;
+
 }
 
 footer {
